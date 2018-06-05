@@ -1,7 +1,7 @@
 class Song
   extend Concerns::Findable #Take all of the methods in the Findable module and add them as class methods
-  extend Concerns::Persistable::ClassMethods
-  include Concerns::Persistable::InstanceMethods
+  extend Persistable::ClassMethods
+  include Persistable::InstanceMethods
 
   attr_accessor :name
   attr_reader :artist, :genre
