@@ -1,5 +1,5 @@
-module Concerns::Persistable
-  
+module Persistable
+
   module InstanceMethods
     def save #Instance Method
       self.class.all << self
