@@ -1,11 +1,15 @@
 module Concerns::Persistable
-
-  def save #Instance Method
-    self.class.all << self
+  
+  module InstanceMethods
+    def save #Instance Method
+      self.class.all << self
+    end
   end
 
-  def destroy_all #Class Method
-    self.all.clear
+  module ClassMethods
+    def destroy_all #Class Method
+      self.all.clear
+    end
   end
 
 end
