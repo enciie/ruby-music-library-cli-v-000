@@ -2,7 +2,7 @@ class Genre
   extend Concerns::Findable
 
   attr_accessor :name
-  attr_reader :songs #Has many songs
+  attr_reader :songs
 
   @@all = []
 
@@ -27,8 +27,7 @@ class Genre
     self.new(name).tap {|a| a.save}
   end
 
-  def artists #
-    #creates a Has Many Through
+  def artists
     @songs.collect {|song| song.artist }.uniq
   end
 
