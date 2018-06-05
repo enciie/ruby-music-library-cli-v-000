@@ -1,7 +1,5 @@
 class Song
   extend Concerns::Findable #Take all of the methods in the Findable module and add them as class methods
-  extend Persistable::ClassMethods
-  include Persistable::InstanceMethods
 
   attr_accessor :name
   attr_reader :artist, :genre
@@ -18,13 +16,13 @@ class Song
     @@all
   end
 
-  # def save
-  #   @@all << self
-  # end
-  #
-  # def self.destroy_all
-  #   @@all.clear
-  # end
+  def save
+    @@all << self
+  end
+
+  def self.destroy_all
+    @@all.clear
+  end
 
   def self.create(name)
     song = self.new(name)
