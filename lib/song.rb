@@ -37,8 +37,11 @@ class Song
   end
 
   def genre=(genre)
-    @genre = genre
+    #reciprocal belongs to
+    #First be a nice object and tell the genre that it has a new song, me.
     genre.songs << self unless genre.songs.include?(self)
+    #Assign that henre to myself
+    @genre = genre
   end
 
   # def self.find_by_name(name)
