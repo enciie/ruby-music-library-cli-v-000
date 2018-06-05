@@ -4,7 +4,7 @@ module Concerns::Persistable
     self.class.all << self
   end
 
-  def self.destroy_all #Class Method
+  def destroy_all #Class Method
     self.all.clear
   end
 
