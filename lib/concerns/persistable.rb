@@ -7,5 +7,5 @@ module Concerns::Persistable
   def self.destroy_all #Class Method
     self.all.clear
   end
-  
+
 end
