@@ -1,4 +1,4 @@
-module Persistable
+module Concerns::Persistable
 
   module InstanceMethods
     def save #Instance Method
